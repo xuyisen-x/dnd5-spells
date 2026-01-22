@@ -1,0 +1,26 @@
+{
+  "name": "@xuyisen--x/dnd5-spells-cn",
+  "version": "1.0.0",
+  "description": "D&D 5 spells data json in Chinese",
+  "main": "dnd5_spells.json",
+  "files": [
+    "dnd5_spells.json"
+  ],
+  "keywords": [
+    "dnd",
+    "spells",
+    "json",
+    "chinese",
+    "trpg"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xuyisen-x/dnd5-spells.git"
+  },
+  "author": "xuyisen--x",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xuyisen-x/dnd5-spells/issues"
+  },
+  "homepage": "https://github.com/xuyisen-x/dnd5-spells#readme"
+}

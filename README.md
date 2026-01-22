@@ -24,3 +24,10 @@ uv run main.py --help
 - 由于不全书本身并非尽善尽美，因此本项目的数据也可能存在一些错误或遗漏，敬请谅解。
 - 由于不全书格式并不规范，解析逻辑可能无法覆盖所有情况，若存在一些错误或遗漏，敬请谅解，也欢迎提交PR修正。
 - 本项目所有法术仅包含不全书中万法大全速查表中列出的玩家手册、扩展与模组中的法术，其他资料来源的法术均未包含在内。
+- 代码本身为GPL-3.0许可证，数据部分可以视为MIT许可证。
+
+## 访问json数据
+
+你可以从一下链接直接访问json数据：
+
+[https://unpkg.com/@xuyisen--x/dnd5-spells-cn@1.0.0/dnd5_spells.json](https://unpkg.com/@xuyisen--x/dnd5-spells-cn@1.0.0/dnd5_spells.json)
