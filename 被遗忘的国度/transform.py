@@ -24,7 +24,7 @@ def deal_with_klass_line(klass_line: str) -> tuple[bool, list[KlassWithExtraInfo
                 klass_list.append(KlassWithExtraInfo(klass=klass, source=source))
         else:
             # 不包含来源信息
-            for klass_zh in part.split('、'):
+            for klass_zh in part.replace('，', '、').split('、'):
                 klass = get_klass(klass_zh.strip())
                 klass_list.append(KlassWithExtraInfo(klass=klass, source=None))
     return is_ritual, klass_list
@@ -77,12 +77,6 @@ def transform_spell_from_html_block(html_block: list[PageElement]) -> Spell:
         level = get_level(first_tag_text[0].strip())
         school = get_magic_school(first_tag_text[1].strip())
     is_ritual, class_list = deal_with_klass_line(first_tag_text[2].strip())
-
-    # 特殊处理
-    if name_zh == "灾厄之刃":
-        is_legacy = True
-    else:
-        is_legacy = False
 
     current_index = 1
     # 找到包含施法时间的标签的下一个标签
@@ -167,8 +161,7 @@ def transform_spell_from_html_block(html_block: list[PageElement]) -> Spell:
         need_concentration=need_concentration,
         duration=duration,
         description=description,
-        source=Source.MODULE,
-        is_legacy=is_legacy
+        source=Source.FR,
     )
 
 def transform_single_file(file_path: str) -> list[Spell]:
@@ -193,17 +186,9 @@ def transform_single_file(file_path: str) -> list[Spell]:
 
     return all_spells
 
-
 def transform() -> list[Spell]:
     import os
-    print("[Module] 正在转化：模组法术")
+    print("[Module] 正在转化：被遗忘的国度")
     # 遍历 玩家手册/raw 目录下的所有文件
-    raw_dir = os.path.join(os.path.dirname(__file__), "raw")
-    # 获取所有 HTML 文件的路径列表
-    filename_list = [os.path.join(raw_dir, filename) for filename in os.listdir(raw_dir) if (filename.endswith('.html') or filename.endswith('.htm'))]
-    filename_list.sort() # 确保文件顺序一致
-    # 处理每个文件并收集结果
-    list_of_lists = [transform_single_file(filename) for filename in filename_list]
-    # 将多个列表合并为一个列表
-    all_spells = [spell for sublist in list_of_lists for spell in sublist]
-    return all_spells
+    filename = os.path.join(os.path.dirname(__file__), "raw", "法术详述.htm")
+    return transform_single_file(filename)

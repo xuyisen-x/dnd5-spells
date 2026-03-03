@@ -12,4 +12,5 @@ class Source(Enum):
     SCC     = "SCC"
     AAG     = "AAG"
     SO      = "SO"
+    FR      = "FR"     # 被遗忘的国度
     MODULE  = "MODULE"  # 模组自定义

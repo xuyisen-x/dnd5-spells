@@ -5,6 +5,7 @@ import os
 file_list = [
     ("模组/冰风谷/新法术.html", "模组法术/raw/冰风谷.html"),
     ("模组/夸力许/新法术.html", "模组法术/raw/夸力许的失落实验室.html"),
+    ("艾伯伦：奇械锻炉/第一章/法术.htm", "模组法术/raw/艾伯伦.htm"),
 ]
 
 def download(redownload: bool):
