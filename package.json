@@ -1,6 +1,6 @@
 {
   "name": "@xuyisen--x/dnd5-spells-cn",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "D&D 5 spells data json in Chinese",
   "main": "dnd5_spells.json",
   "files": [
