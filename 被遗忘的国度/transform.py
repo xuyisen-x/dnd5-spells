@@ -89,6 +89,8 @@ def transform_spell_from_html_block(html_block: list[PageElement]) -> Spell:
         raise ValueError(f"未找到施法时间标签，法术名称：'{name_zh}'")
     current_index += 1
     casting_time = details[current_index].strip()
+    if '仪式' in casting_time:
+        is_ritual = True
     current_index += 1
 
     # 找到包含施法范围的标签的下一个标签

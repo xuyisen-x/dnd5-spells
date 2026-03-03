@@ -171,6 +171,10 @@ def transform_spell_from_html_block(html_block: list[PageElement]) -> Spell:
             for child in element.find_all(True):
                 child.attrs.pop('class', None)
     description = "".join(html_parts).strip()
+
+    # 特殊处理
+    if name_zh == "灾厄之刃":
+        is_legacy = True
     
     return Spell(
         name=name_zh,

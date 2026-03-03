@@ -83,6 +83,9 @@ def transform_spell_from_html_block(html_block: list[PageElement]) -> Spell:
         is_legacy = True
     else:
         is_legacy = False
+    
+    if name_zh == "人工生命仆从":
+        is_ritual = True
 
     current_index = 1
     # 找到包含施法时间的标签的下一个标签
