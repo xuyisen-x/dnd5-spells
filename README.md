@@ -30,4 +30,4 @@ uv run main.py --help
 
 你可以从一下链接直接访问json数据：
 
-[https://unpkg.com/@xuyisen--x/dnd5-spells-cn@1.0.0/dnd5_spells.json](https://unpkg.com/@xuyisen--x/dnd5-spells-cn@1.0.0/dnd5_spells.json)
+[https://unpkg.com/@xuyisen--x/dnd5-spells-cn@1.1.1/dnd5_spells.json](https://unpkg.com/@xuyisen--x/dnd5-spells-cn@1.1.1/dnd5_spells.json)
